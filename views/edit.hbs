@@ -1,21 +1,25 @@
 <form class="form" action="/puppies/{{id}}/edit" method="post">
   <img class="img-circle" src="{{image}}" alt="{{name}}">
   <label for="name" class="form-item">
-    Name:
-    <input type="text" name="name" value="{{name}}">
+    Animal:
+    <input type="text" name="animal" value="{{animal}}">
   </label>
   
   <label for="breed" class="form-item">
-    Breed:
-    <input type="text" name="breed" value="{{breed}}">
+    Personality:
+    <input type="text" name="personality" value="{{personality}}">
   </label>
   
   <label for="owner" class="form-item">
-    Owner:
-    <input type="text" name="owner" value="{{owner}}">
+    Type:
+    <input type="text" name="type" value="{{type}}">
   </label>
   
   <input type="hidden" name="image" value="{{image}}">
   
   <input type="submit" name="" value="Submit">
 </form>
+
+{{!-- "name" changed to "animal"--}}
+{{!--  "breed" changed to "personality" --}}
+{{!-- "owner" changed to "type" --}}
