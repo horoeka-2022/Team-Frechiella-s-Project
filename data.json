@@ -4,56 +4,56 @@
       "id": 1,
       "animal": "fox",
       "type": "land",
-      "image": "/images/puppy1.jpg",
+      "image": "/images/arcticFox.jpg",
       "personality": "introvert"
     },
     {
       "id": 2,
       "animal": "labrador",
       "type": "land",
-      "image": "/images/puppy2.jpg",
+      "image": "/images/chocolateLab.jpg",
       "personality": "extrovert"
     },
     {
       "id": 3,
       "animal": "owl",
       "type": "sky",
-      "image": "/images/puppy3.jpg",
+      "image": "/images/desertOwL.jpg",
       "personality": "introvert"
     },
     {
       "id": 4,
       "animal": "fantail",
       "type": "sky",
-      "image": "/images/puppy4.jpg",
+      "image": "/images/piwakawaka.jpg",
       "personality": "extrovert"
     },
     {
       "id": 5,
       "animal": "jellyfish",
       "type": "sea",
-      "image": "/images/puppy5.jpg",
+      "image": "/images/jellyfish.jpg",
       "personality": "introvert"
     },
     {
       "id": 6,
       "animal": "sunfish",
       "type": "sea",
-      "image": "/images/puppy6.jpg",
+      "image": "/images/sunfish.jpg",
       "personality": "extrovert"
     },
     {
       "id": 7,
       "animal": "frechiella",
       "type": "cosmic",
-      "image": "/images/puppy7.jpg",
+      "image": "/images/frechiella.jpg",
       "personality": "introvert"
     },
   {
     "id": 8,
     "animal": "unicorn",
     "type": "cosmic",
-    "image": "/images/puppy7.jpg",
+    "image": "/images/unicorn.jpg",
     "personality": "extrovert"
   }
   ]
