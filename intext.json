@@ -1,0 +1,14 @@
+{
+  "vibes": [
+    {
+      "id": 1,
+      "vibe": "introvert",
+      "image": "/images/puppy1.jpg"
+    },
+    {
+      "id": 2,
+      "vibe": "extravert",
+      "image": "/images/puppy1.jpg"
+    }
+  ]
+}
