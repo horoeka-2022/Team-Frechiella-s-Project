@@ -25,7 +25,7 @@ router.get('/', async (req, res) => {
 
 // to choose introvert or extravert
 
-router.get('/elements/:id', async (req, res) => {
+router.get('/:elements', async (req, res) => {
   const elementID = JSON.parse(await fs.readFile('intext.json'))
 
   try {
@@ -37,7 +37,7 @@ router.get('/elements/:id', async (req, res) => {
 
 //to result page
 
-router.get('/elements/:id/data/:id', async (req, res) => {
+router.get('/:elements/:id/data/:id', async (req, res) => {
   const id = JSON.parse(await fs.readFile('data.json')).animals.find(
     (animals) => animals.id === Number(req.params.id)
   )
