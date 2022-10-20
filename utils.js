@@ -1,7 +1,7 @@
 const path = require('path')
 const fs = require('node:fs/promises')
 
-async function getPuppyData() {
+async function getAnimalData() {
   try {
     const filepath = path.join(__dirname, 'data.json')
     return fs.readFile(filepath).then((data) => JSON.parse(data))
@@ -11,5 +11,5 @@ async function getPuppyData() {
 }
 
 module.exports = {
-  getPuppyData,
+  getAnimalData,
 }

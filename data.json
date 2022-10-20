@@ -1,1 +1,60 @@
-{"puppies":[{"id":1,"name":"Geoff","breed":"Labrador","owner":"Fred","image":"/images/puppy1.jpg"},{"id":2,"name":"Millie","breed":"Chihuahua","owner":"Chloe","image":"/images/puppy2.jpg"},{"id":3,"name":"Magnum","owner":"Michael","image":"/images/puppy3.jpg","breed":"Rottweiler"},{"id":4,"name":"Sadie","breed":"Poodle","owner":"Sam","image":"/images/puppy4.jpg"},{"id":5,"name":"Cooper","breed":"Pug","owner":"Joanna","image":"/images/puppy5.jpg"},{"id":6,"name":"Vanessa","breed":"Golden Retriever","owner":"Conor","image":"/images/puppy6.jpg"},{"id":7,"name":"Morty","breed":"Black Labrador","owner":"Rick","image":"/images/puppy7.jpg"}]}
+{
+  "animals": [
+    {
+      "id": 1,
+      "animal": "fox",
+      "type": "land",
+      "image": "/images/puppy1.jpg",
+      "personality": "introvert"
+    },
+    {
+      "id": 2,
+      "animal": "labrador",
+      "type": "land",
+      "image": "/images/puppy2.jpg",
+      "personality": "extrovert"
+    },
+    {
+      "id": 3,
+      "animal": "owl",
+      "type": "sky",
+      "image": "/images/puppy3.jpg",
+      "personality": "introvert"
+    },
+    {
+      "id": 4,
+      "animal": "fantail",
+      "type": "sky",
+      "image": "/images/puppy4.jpg",
+      "personality": "extrovert"
+    },
+    {
+      "id": 5,
+      "animal": "jellyfish",
+      "type": "sea",
+      "image": "/images/puppy5.jpg",
+      "personality": "introvert"
+    },
+    {
+      "id": 6,
+      "animal": "sunfish",
+      "type": "sea",
+      "image": "/images/puppy6.jpg",
+      "personality": "extrovert"
+    },
+    {
+      "id": 7,
+      "animal": "frechiella",
+      "type": "cosmic",
+      "image": "/images/puppy7.jpg",
+      "personality": "introvert"
+    },
+  {
+    "id": 8,
+    "animal": "unicorn",
+    "type": "cosmic",
+    "image": "/images/puppy7.jpg",
+    "personality": "extrovert"
+  }
+  ]
+}

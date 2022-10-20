@@ -1,56 +1,56 @@
-const express = require('express');
-const { getPuppyData } = require('./utils');
-const path = require('path');
-const fs = require('node:fs/promises');
+const express = require('express')
+const { getAnimalData } = require('./utils')
+const path = require('path')
+const fs = require('node:fs/promises')
 
-const router = express.Router();
+const router = express.Router()
 
-module.exports = router;
+module.exports = router
 
-// Get puppy data
+// Get animal data
 router.get('/:id', async (req, res) => {
   try {
-    await getPuppyData().then((data) => {
-      const id = data.puppies.find((puppy) => puppy.id === +req.params.id);
-      res.render('details', id);
-    });
+    await getAnimalData().then((data) => {
+      const id = data.animals.find((animal) => animal.id === +req.params.id)
+      res.render('details', id)
+    })
   } catch (error) {
-    console.log('Whoops, could not find that puppy');
+    console.log('Whoops, there was an error')
   }
-});
+})
 
-//edit puppy data
+//edit animal data
 router.get('/:id/edit', async (req, res) => {
   try {
-    await getPuppyData().then((data) => {
-      let id = data.puppies.find((puppy) => puppy.id === +req.params.id);
-      res.render('edit', id);
-    });
+    await getAnimalData().then((data) => {
+      let id = data.animals.find((animal) => animal.id === +req.params.id)
+      res.render('edit', id)
+    })
   } catch (error) {
-    console.log('Whoops, there was an error');
+    console.log('Whoops, there was an error')
   }
-});
+})
 
 // Submit changes
 router.post('/:id/edit', async (req, res) => {
   try {
-    const postedData = req.body;
+    const postedData = req.body
 
-    await getPuppyData().then(async (data) => {
-      const index = data.puppies.findIndex(
-        (puppy) => puppy.id === +req.params.id,
-      );
+    await getAnimalData().then(async (data) => {
+      const index = data.animals.findIndex(
+        (animal) => animal.id === +req.params.id
+      )
 
-      data.puppies[index] = {
+      data.animals[index] = {
         id: +req.params.id,
         ...postedData,
-      };
+      }
 
-      const filepath = path.join(__dirname, 'data.json');
-      await fs.writeFile(filepath, JSON.stringify(data));
-      res.redirect(`/puppies/${req.params.id}`);
-    });
+      const filepath = path.join(__dirname, 'data.json')
+      await fs.writeFile(filepath, JSON.stringify(data))
+      res.redirect(`/animals/${req.params.id}`)
+    })
   } catch (error) {
-    console.log('Whoops, there was an error');
+    console.log('Whoops, there was an error')
   }
-});
+})
