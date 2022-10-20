@@ -1,12 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: #FFCCCC;
-  font-family: 'Spirax', cursive;
+  text-align: center;
+  font-family: 'Fredoka One', cursive;
+
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(222, 168, 248, 1) 0%,
+    rgba(168, 222, 258, 1) 21.9%,
+    rgba(189, 250, 205, 1) 35.6%,
+    rgba(243, 250, 189, 1) 53.9%,
+    rgba(250, 227, 189, 1) 66.8%,
+    rgba(248, 172, 171, 1) 95%,
+    rgba(254, 170, 212, 1) 99.9%
+  );
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 0 180px;
+  gap: 50px;
+  margin: 50px 0 30px;
 }
 
 .app {
@@ -14,11 +34,21 @@ body {
   flex-direction: column;
 }
 
-.puppy-list {
+.element-list {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 50px;
+  flex-basis: 35%;
+}
+
+.text-in-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  text-transform: capitalize;
 }
 
 .puppy {
@@ -29,24 +59,50 @@ body {
 }
 
 .img-circle {
+  flex-basis: 40%;
   border-radius: 50%;
   object-fit: cover;
-  width: 230px;
-  height: 230px;
+  width: 250px;
+  height: 250px;
+  transition: 0.2s linear;
+}
+
+.img-circle:hover {
+  transform: scale(1.2);
 }
 
 .title {
+  font-weight: 400;
+  font-size: 100px;
   text-align: center;
+  font-family: 'Monoton', cursive;
+  color: rgb(101, 117, 174);
+}
+
+.intro {
+  font-weight: 400;
+}
+
+.question {
+  display: block;
+  padding: 0 200px;
+  font-weight: 400;
 }
 
 .nav {
+  text-decoration: none;
+  font-size: 30px;
+  margin-bottom: 10px;
   text-align: center;
   color: black;
+}
+
+.nav:hover {
+  transform: ;
 }
 
 .form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Roboto', sans-serif;
 }

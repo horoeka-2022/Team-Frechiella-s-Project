@@ -1,21 +1,24 @@
 {{!-- {{!-- <div class="container"> 
   <img class="img-circle" src="{{image}}" alt="{{vibe}}">
   {{!-- <h2>{{vibe}}</h2>  --}}
- {{!-- </div>
-  <div class="container">  --}}
-  {{!-- <a href="/animals/{{id}}/edit">Edit</a> --}}
-    {{!-- <img class="img-circle" src="{{image}}" alt="{{vibe}}"> --}}
- {{!-- <h2>{{vibe}}</h2>  --}}
-{{!-- </div --}}
-
-<div class="container">
+{{! </div>
+  <div class="container">  }}
+{{!-- <a href="/animals/{{id}}/edit">Edit</a> --}}
+{{!-- <img class="img-circle" src="{{image}}" alt="{{vibe}}"> --}}
+{{!-- <h2>{{vibe}}</h2>  --}}
+{{! </div }}
+<h3 class='question'>STEP2: In this dream, you choose to make a friend - make
+  your decision</h3>
+<div class='container'>
   {{#each vibes}}
+
   <h2>{{vibe}}</h2>
   <div class="element-list">
     {{!-- maybe need result/:id path --}}
     <a href="/elements/{{id}}/data/{{id}}"><img class="img-circle" src="{{image}}" alt="{{name}}"></a>
   </div>
+
   {{/each}}
 </div>
 
-{{!-- may need to change "animal" back to "name" if not working --}}
+{{! may need to change "animal" back to "name" if not working }}
