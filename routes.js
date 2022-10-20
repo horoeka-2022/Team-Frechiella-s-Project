@@ -22,16 +22,20 @@ router.get('/', async (req, res) => {
   }
 })
 
-// router.get('/:id', async (req, res) => {
-//   try {
-//     await getAnimalData().then((data) => {
-//       const id = data.animals.find((animal) => animal.id === +req.params.id)
-//       res.render('details', id)
-//     })
-//   } catch (error) {
-//     console.log('Whoops, there was an error')
-//   }
-// })
+router.get('/elements/:id', async (req, res) => {
+  const elementID = JSON.parse(await fs.readFile('intext.json')).vibes.find(
+    (vibe) => vibe.id === Number(req.params.id)
+  )
+  try {
+    // await getElementData().then((element) => {
+    //   const id = elements.element.find(
+    //     (element) => element.id === +req.params.id
+    //   )
+    res.render('2images', elementID)
+  } catch (error) {
+    console.log('Whoops, there was an error')
+  }
+})
 
 // // Get animal data
 // router.get('/:id', async (req, res) => {
