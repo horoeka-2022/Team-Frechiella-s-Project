@@ -1,9 +1,18 @@
-<div class="container">
+<h2 class='intro'>Welcome to Totems!
+  <br />where we help you discover your spirit animal in two simple steps!</h2>
+<h3 class='question'>STEP1: You can decide where you travel in your dreams
+  tonight, where do you go?</h3>
+<div class='container'>
+
   {{#each elements}}
-  <div class="element-list">
-    <a href="/elements/{{id}}"><img class="img-circle" src="{{image}}" alt="{{element}}"></a>
-  </div>
+    <div class='element-list'>
+      <a href='/elements/{{id}}'><img
+          class='img-circle'
+          src='{{image}}'
+          alt='{{element}}'
+        /></a>
+    </div>
   {{/each}}
 </div>
 
-{{!-- may need to change alt "element" back to "name" if not working--}}
+{{! may need to change alt "element" back to "name" if not working}}
