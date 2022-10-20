@@ -1,0 +1,24 @@
+const express = require('express')
+const hbs = require('express-handlebars')
+const { getPuppyData } = require('./utils')
+const puppyRoutes = require('./routes')
+
+const server = express()
+
+module.exports = server
+
+// Server configuration
+server.use(express.static('public'))
+server.use(express.urlencoded({ extended: false }))
+server.use('/puppies', puppyRoutes)
+
+// Handlebars configuration
+server.engine('hbs', hbs.engine({ extname: 'hbs' }))
+server.set('view engine', 'hbs')
+
+// Your routes/router(s) should go here
+server.get('/', async (req, res) => {
+  const data = await getPuppyData()
+
+  res.render('home', data)
+})
