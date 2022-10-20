@@ -23,9 +23,11 @@ router.get('/', async (req, res) => {
   }
 })
 
+// to choose introvert or extravert
+
 router.get('/elements/:id', async (req, res) => {
   const elementID = JSON.parse(await fs.readFile('intext.json'))
-  console.log(elementID)
+
   try {
     res.render('2images', elementID)
   } catch (error) {
@@ -33,62 +35,16 @@ router.get('/elements/:id', async (req, res) => {
   }
 })
 
-// router.get('/elements/:id', async (req, res) => {
+//to result page
 
-//   try {
-//     await getElementData().then((vibes) => {
-//       const elementID = vibes.vibe.find((vibe) => vibe.id === +req.params.id)
-//       res.render('2images', elementID)
-//     })
-//   } catch (error) {
-//     console.log('Whoops, there was an error')
-//   }
-// })
-
-// // Get animal data
-// router.get('/:id', async (req, res) => {
-//   try {
-//     await getAnimalData().then((data) => {
-//       const id = data.animals.find((animal) => animal.id === +req.params.id)
-//       res.render('details', id)
-//     })
-//   } catch (error) {
-//     console.log('Whoops, there was an error')
-//   }
-// })
-
-// //edit animal data
-// router.get('/:id/edit', async (req, res) => {
-//   try {
-//     await getAnimalData().then((data) => {
-//       let id = data.animals.find((animal) => animal.id === +req.params.id)
-//       res.render('edit', id)
-//     })
-//   } catch (error) {
-//     console.log('Whoops, there was an error')
-//   }
-// })
-
-// // Submit changes
-// router.post('/:id/edit', async (req, res) => {
-//   try {
-//     const postedData = req.body
-
-//     await getAnimalData().then(async (data) => {
-//       const index = data.animals.findIndex(
-//         (animal) => animal.id === +req.params.id
-//       )
-
-//       data.animals[index] = {
-//         id: +req.params.id,
-//         ...postedData,
-//       }
-
-//       const filepath = path.join(__dirname, 'data.json')
-//       await fs.writeFile(filepath, JSON.stringify(data))
-//       res.redirect(`/animals/${req.params.id}`)
-//     })
-//   } catch (error) {
-//     console.log('Whoops, there was an error')
-//   }
-// })
+router.get('/elements/:id/data/:id', async (req, res) => {
+  const id = JSON.parse(await fs.readFile('data.json')).animals.find(
+    (animals) => animals.id === Number(req.params.id)
+  )
+  console.log(id)
+  try {
+    res.render('result', id)
+  } catch (error) {
+    console.log('Whoops, there was an error')
+  }
+})
