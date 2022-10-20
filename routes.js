@@ -7,50 +7,76 @@ const router = express.Router()
 
 module.exports = router
 
-// Get animal data
-router.get('/:id', async (req, res) => {
+// root route
+router.get('/', async (req, res) => {
+  const elementData = await fs.readFile('elements.json')
+  const element = JSON.parse(elementData)
+
+  const viewData = {
+    elements: element.elements,
+  }
   try {
-    await getAnimalData().then((data) => {
-      const id = data.animals.find((animal) => animal.id === +req.params.id)
-      res.render('details', id)
-    })
-  } catch (error) {
-    console.log('Whoops, there was an error')
+    res.render('home', viewData)
+  } catch (err) {
+    alert('Sorry, I can/t find an element')
   }
 })
 
-//edit animal data
-router.get('/:id/edit', async (req, res) => {
-  try {
-    await getAnimalData().then((data) => {
-      let id = data.animals.find((animal) => animal.id === +req.params.id)
-      res.render('edit', id)
-    })
-  } catch (error) {
-    console.log('Whoops, there was an error')
-  }
-})
+// router.get('/:id', async (req, res) => {
+//   try {
+//     await getAnimalData().then((data) => {
+//       const id = data.animals.find((animal) => animal.id === +req.params.id)
+//       res.render('details', id)
+//     })
+//   } catch (error) {
+//     console.log('Whoops, there was an error')
+//   }
+// })
 
-// Submit changes
-router.post('/:id/edit', async (req, res) => {
-  try {
-    const postedData = req.body
+// // Get animal data
+// router.get('/:id', async (req, res) => {
+//   try {
+//     await getAnimalData().then((data) => {
+//       const id = data.animals.find((animal) => animal.id === +req.params.id)
+//       res.render('details', id)
+//     })
+//   } catch (error) {
+//     console.log('Whoops, there was an error')
+//   }
+// })
 
-    await getAnimalData().then(async (data) => {
-      const index = data.animals.findIndex(
-        (animal) => animal.id === +req.params.id
-      )
+// //edit animal data
+// router.get('/:id/edit', async (req, res) => {
+//   try {
+//     await getAnimalData().then((data) => {
+//       let id = data.animals.find((animal) => animal.id === +req.params.id)
+//       res.render('edit', id)
+//     })
+//   } catch (error) {
+//     console.log('Whoops, there was an error')
+//   }
+// })
 
-      data.animals[index] = {
-        id: +req.params.id,
-        ...postedData,
-      }
+// // Submit changes
+// router.post('/:id/edit', async (req, res) => {
+//   try {
+//     const postedData = req.body
 
-      const filepath = path.join(__dirname, 'data.json')
-      await fs.writeFile(filepath, JSON.stringify(data))
-      res.redirect(`/animals/${req.params.id}`)
-    })
-  } catch (error) {
-    console.log('Whoops, there was an error')
-  }
-})
+//     await getAnimalData().then(async (data) => {
+//       const index = data.animals.findIndex(
+//         (animal) => animal.id === +req.params.id
+//       )
+
+//       data.animals[index] = {
+//         id: +req.params.id,
+//         ...postedData,
+//       }
+
+//       const filepath = path.join(__dirname, 'data.json')
+//       await fs.writeFile(filepath, JSON.stringify(data))
+//       res.redirect(`/animals/${req.params.id}`)
+//     })
+//   } catch (error) {
+//     console.log('Whoops, there was an error')
+//   }
+// })

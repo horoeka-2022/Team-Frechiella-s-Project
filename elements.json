@@ -1,0 +1,20 @@
+{
+  "elements": [
+    {
+      "element": "earth",
+      "image": "/images/puppy1.jpg"
+    },
+    {
+      "element": "sea",
+      "image": "/images/puppy1.jpg"
+    },
+    {
+     "element": "cosmos",
+      "image": "/images/puppy1.jpg"
+    },
+    {
+      "element": "sky",
+      "image": "/images/puppy1.jpg"
+    }
+  ]
+}
