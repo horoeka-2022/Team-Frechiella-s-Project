@@ -3,22 +3,22 @@
     {
       "element": "earth",
       "id": 1,
-      "image": "/images/puppy1.jpg"
+      "image": "/images/land.jpg"
     },
     {
       "element": "sea",
       "id": 2,
-      "image": "/images/puppy1.jpg"
+      "image": "/images/sea.jpg"
     },
     {
      "element": "cosmos",
      "id": 3,
-      "image": "/images/puppy1.jpg"
+      "image": "/images/cosmic.jpg"
     },
     {
       "element": "sky",
       "id": 4,
-      "image": "/images/puppy1.jpg"
+      "image": "/images/sky.jpg"
     }
   ]
 }

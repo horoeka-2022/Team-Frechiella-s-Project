@@ -1,5 +1,6 @@
 const express = require('express')
-const { getAnimalData } = require('./utils')
+// const { getAnimalData } = require('./utils')
+const { getElementData } = require('./utils')
 const path = require('path')
 const fs = require('node:fs/promises')
 
@@ -23,19 +24,26 @@ router.get('/', async (req, res) => {
 })
 
 router.get('/elements/:id', async (req, res) => {
-  const elementID = JSON.parse(await fs.readFile('intext.json')).vibes.find(
-    (vibe) => vibe.id === Number(req.params.id)
-  )
+  const elementID = JSON.parse(await fs.readFile('intext.json'))
+  console.log(elementID)
   try {
-    // await getElementData().then((element) => {
-    //   const id = elements.element.find(
-    //     (element) => element.id === +req.params.id
-    //   )
     res.render('2images', elementID)
   } catch (error) {
     console.log('Whoops, there was an error')
   }
 })
+
+// router.get('/elements/:id', async (req, res) => {
+
+//   try {
+//     await getElementData().then((vibes) => {
+//       const elementID = vibes.vibe.find((vibe) => vibe.id === +req.params.id)
+//       res.render('2images', elementID)
+//     })
+//   } catch (error) {
+//     console.log('Whoops, there was an error')
+//   }
+// })
 
 // // Get animal data
 // router.get('/:id', async (req, res) => {

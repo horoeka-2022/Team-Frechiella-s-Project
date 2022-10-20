@@ -1,19 +1,20 @@
-<div class="container"> 
+{{!-- {{!-- <div class="container"> 
   <img class="img-circle" src="{{image}}" alt="{{vibe}}">
-  <h2>{{vibe}}</h2> 
-  <p>{{id}}</p>
+  {{!-- <h2>{{vibe}}</h2>  --}}
+ {{!-- </div>
+  <div class="container">  --}}
   {{!-- <a href="/animals/{{id}}/edit">Edit</a> --}}
-    <img class="img-circle" src="{{image}}" alt="{{vibe}}">
- <h2>{{vibe}}</h2> 
-  <p>{{id}}</p>
-</div>
+    {{!-- <img class="img-circle" src="{{image}}" alt="{{vibe}}"> --}}
+ {{!-- <h2>{{vibe}}</h2>  --}}
+{{!-- </div --}}
 
-{{!-- <div class="container">
-  {{#each elements}}
+<div class="container">
+  {{#each vibes}}
+  <h2>{{vibe}}</h2>
   <div class="element-list">
     <a href="/elements/{{id}}/result"><img class="img-circle" src="{{image}}" alt="{{name}}"></a>
   </div>
   {{/each}}
-</div> --}}
+</div>
 
 {{!-- may need to change "animal" back to "name" if not working --}}
