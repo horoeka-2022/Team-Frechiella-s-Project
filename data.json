@@ -4,14 +4,14 @@
     {
       "id": 1,
       "animal": "fox",
-      "type": "land",
+      "type": "earth",
       "image": "/images/arcticFox.jpg",
       "personality": "introvert"
     },
     {
       "id": 2,
       "animal": "labrador",
-      "type": "land",
+      "type": "earth",
       "image": "/images/chocolateLab.jpg",
       "personality": "extrovert"
     },

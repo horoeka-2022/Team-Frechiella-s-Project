@@ -5,13 +5,11 @@
 <div class='container'>
 
   {{#each elements}}
-    <div class='element-list'>
-      <a href='/elements/{{id}}'><img
-          class='img-circle'
-          src='{{image}}'
-          alt='{{element}}'
-        /></a>
-    </div>
+
+  <div class="element-list">
+    <a href="/{{element}}"><img class="img-circle" src="{{image}}" alt="{{element}}"></a>
+  </div>
+
   {{/each}}
 </div>
 

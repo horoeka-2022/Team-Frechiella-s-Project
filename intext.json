@@ -3,12 +3,12 @@
     {
       "id": 1,
       "vibe": "introvert",
-      "image": "/images/puppy1.jpg"
+      "image": "/images/introvert.jpg"
     },
     {
       "id": 2,
       "vibe": "extravert",
-      "image": "/images/puppy1.jpg"
+      "image": "/images/extrovert.jpg"
     }
   ]
 }
