@@ -12,11 +12,15 @@
 <div class='container'>
   {{#each vibes}}
 
-  <h2>{{vibe}}</h2>
-  <div class="element-list">
-    {{!-- maybe need result/:id path --}}
-    <a href="/elements/{{id}}/data/{{id}}"><img class="img-circle" src="{{image}}" alt="{{name}}"></a>
-  </div>
+    <div class='element-list'>
+      <p class='text-in-circle'>{{vibe}}</p>
+      {{! maybe need result/:id path }}
+      <a href='/elements/{{id}}/data/{{id}}'><img
+          class='img-circle'
+          src='{{image}}'
+          alt='{{name}}'
+        /></a>
+    </div>
 
   {{/each}}
 </div>
