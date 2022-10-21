@@ -13,7 +13,7 @@
       "animal": "labrador",
       "type": "earth",
       "image": "/images/chocolateLab.jpg",
-      "personality": "extrovert",
+      "personality": "extravert",
       "animalText": "Ever reliable, you enjoy the company of people and are best known for exuding warmth and love."
     },
     {
@@ -29,7 +29,7 @@
       "animal": "fantail",
       "type": "sky",
       "image": "/images/piwakawaka.jpg",
-      "personality": "extrovert",
+      "personality": "extravert",
       "animalText": "Fanciful, with an ever present optimism, your presence is always appreciated."
     },
     {
@@ -45,13 +45,13 @@
       "animal": "sunfish",
       "type": "sea",
       "image": "/images/sunfish.jpg",
-      "personality": "extrovert",
+      "personality": "extravert",
       "animalText": "Despite shying away from public gatherings, those rare occasions that you are present people revel in your warmth. "
     },
     {
       "id": 7,
       "animal": "frechiella",
-      "type": "cosmic",
+      "type": "cosmos",
       "image": "/images/frechiella.jpg",
       "personality": "introvert",
       "animalText": "A mysterious creature, you enjoy your privacy. Very little is known about you but people are still fond of you."
@@ -61,7 +61,7 @@
       "animal": "unicorn",
       "type": "cosmic",
       "image": "/images/unicorn.jpg",
-      "personality": "extrovert",
+      "personality": "extravert",
       "animalText": "A wondrous, much-loved creature, your reputation for the mythical masks your private nature and the fact that you are seldom seen."
     }
   ]

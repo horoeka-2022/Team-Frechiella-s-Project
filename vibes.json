@@ -1,0 +1,53 @@
+{
+  "vibes": [
+    {
+      "id": 1,
+      "vibe": "introvert",
+      "image": "/images/introvert.jpg",
+      "element": "earth"
+    },
+    {
+      "id": 2,
+      "vibe": "extravert",
+      "image": "/images/extrovert.jpg",
+      "element": "earth"
+    },
+    {
+      "id": 3,
+      "vibe": "introvert",
+      "image": "/images/introvert.jpg",
+      "element": "sky"
+    },
+    {
+      "id": 4,
+      "vibe": "extravert",
+      "image": "/images/extrovert.jpg",
+      "element": "sky"
+    },
+    {
+      "id": 5,
+      "vibe": "introvert",
+      "image": "/images/introvert.jpg",
+      "element": "sea"
+    },
+    {
+      "id": 6,
+      "vibe": "extravert",
+      "image": "/images/extrovert.jpg",
+      "element": "sea"
+    }
+    ,
+    {
+      "id": 7,
+      "vibe": "introvert",
+      "image": "/images/introvert.jpg",
+      "element": "cosmos"
+    },
+    {
+      "id": 8,
+      "vibe": "extravert",
+      "image": "/images/extrovert.jpg",
+      "element": "cosmos"
+    }
+  ]
+}
