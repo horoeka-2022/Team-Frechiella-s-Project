@@ -1,6 +1,6 @@
 const express = require('express')
-// const { getAnimalData } = require('./utils')
-const { getElementData } = require('./utils')
+// // const { getAnimalData } = require('./utils')
+// const { getElementData } = require('./utils')
 const path = require('path')
 const fs = require('node:fs/promises')
 
@@ -25,11 +25,14 @@ router.get('/', async (req, res) => {
 
 // to choose introvert or extravert
 
-router.get('/:elements', async (req, res) => {
-  const elementID = JSON.parse(await fs.readFile('intext.json'))
-
+router.get('/:element', async (req, res) => {
+  const dataVibes = JSON.parse(await fs.readFile('vibes.json'))
+  const vibes = dataVibes.vibes.filter(
+    (vibe) => vibe.element === req.params.element
+  )
+  console.log({ vibes })
   try {
-    res.render('2images', elementID)
+    res.render('2images', { vibes })
   } catch (error) {
     console.log('Whoops, there was an error')
   }
@@ -37,10 +40,13 @@ router.get('/:elements', async (req, res) => {
 
 //to result page
 
-router.get('/:elements/:id/data/:id', async (req, res) => {
+// router should ideally say '/:elements/:name' where name is the name of animal
+
+router.get('/elements/:vibes', async (req, res) => {
   const id = JSON.parse(await fs.readFile('data.json')).animals.find(
     (animals) => animals.id === Number(req.params.id)
   )
+
   console.log(id)
   try {
     res.render('result', id)
