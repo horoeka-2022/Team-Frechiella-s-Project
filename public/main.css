@@ -59,6 +59,10 @@ body {
   margin: 50px;
 }
 
+.animal-name {
+  margin-top: 30px;
+}
+
 .img-circle {
   flex-basis: 40%;
   border-radius: 150px;
@@ -70,6 +74,12 @@ body {
 
 .img-circle:hover {
   transform: scale(1.2);
+}
+
+.animal-text {
+  margin-top: 20px;
+  color: rgb(218, 142, 2);
+  font-size: 20px;
 }
 
 .title {

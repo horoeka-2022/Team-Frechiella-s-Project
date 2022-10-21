@@ -1,4 +1,3 @@
-
 {
   "animals": [
     {
@@ -6,56 +5,64 @@
       "animal": "fox",
       "type": "earth",
       "image": "/images/arcticFox.jpg",
-      "personality": "introvert"
+      "personality": "introvert",
+      "animalText": "A strong individual, your inclination towards solitude masks your inner warmth."
     },
     {
       "id": 2,
       "animal": "labrador",
       "type": "earth",
       "image": "/images/chocolateLab.jpg",
-      "personality": "extrovert"
+      "personality": "extrovert",
+      "animalText": "Ever reliable, you enjoy the company of people and are best known for exuding warmth and love."
     },
     {
       "id": 3,
       "animal": "owl",
       "type": "sky",
       "image": "/images/desertOwL.jpg",
-      "personality": "introvert"
+      "personality": "introvert",
+      "animalText": "Strong and independent, you enjoy your privacy and gazing into long distances, reflecting upon life's many wonders."
     },
     {
       "id": 4,
       "animal": "fantail",
       "type": "sky",
       "image": "/images/piwakawaka.jpg",
-      "personality": "extrovert"
+      "personality": "extrovert",
+      "animalText": "Fanciful, with an ever present optimism, your presence is always appreciated."
     },
     {
       "id": 5,
       "animal": "jellyfish",
       "type": "sea",
       "image": "/images/jellyfish.jpg",
-      "personality": "introvert"
+      "personality": "introvert",
+      "animalText": "Not easily understood, you are an intriguing creature and the subject of people’s fascination."
     },
     {
       "id": 6,
       "animal": "sunfish",
       "type": "sea",
       "image": "/images/sunfish.jpg",
-      "personality": "extrovert"
+      "personality": "extrovert",
+      "animalText": "Despite shying away from public gatherings, those rare occasions that you are present people revel in your warmth. "
     },
     {
       "id": 7,
       "animal": "frechiella",
       "type": "cosmic",
       "image": "/images/frechiella.jpg",
-      "personality": "introvert"
+      "personality": "introvert",
+      "animalText": "A mysterious creature, you enjoy your privacy. Very little is known about you but people are still fond of you."
     },
-  {
-    "id": 8,
-    "animal": "unicorn",
-    "type": "cosmic",
-    "image": "/images/unicorn.jpg",
-    "personality": "extrovert"
-  }
+    {
+      "id": 8,
+      "animal": "unicorn",
+      "type": "cosmic",
+      "image": "/images/unicorn.jpg",
+      "personality": "extrovert",
+      "animalText": "A wondrous, much-loved creature, your reputation for the mythical masks your private nature and the fact that you are seldom seen."
+    }
   ]
 }

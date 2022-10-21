@@ -38,10 +38,11 @@ router.get('/:elements', async (req, res) => {
 //to result page
 
 router.get('/:elements/:id/data/:id', async (req, res) => {
+  console.log(req.body)
   const id = JSON.parse(await fs.readFile('data.json')).animals.find(
     (animals) => animals.id === Number(req.params.id)
   )
-  console.log(id)
+  // console.log(id)
   try {
     res.render('result', id)
   } catch (error) {
