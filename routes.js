@@ -43,13 +43,15 @@ router.get('/:element', async (req, res) => {
 // router should ideally say '/:elements/:name' where name is the name of animal
 
 router.get('/:element/:vibes', async (req, res) => {
-  const id = JSON.parse(await fs.readFile('data.json')).animals.find(
-    (animals) => animals.id === Number(req.params.id)
+  const id = JSON.parse(await fs.readFile('data.json')).animals.filter(
+    (animal) =>
+      animal.type == req.params.element &&
+      animal.personality == req.params.vibes
   )
 
-  console.log(id)
+  console.log('current vibe ID: ', req.params)
   try {
-    res.render('result', id)
+    res.render('result', id[0])
   } catch (error) {
     console.log('Whoops, there was an error')
   }

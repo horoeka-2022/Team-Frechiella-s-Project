@@ -13,7 +13,7 @@
       "animal": "labrador",
       "type": "earth",
       "image": "/images/chocolateLab.jpg",
-      "personality": "extrovert"
+      "personality": "extravert"
     },
     {
       "id": 3,
@@ -27,7 +27,7 @@
       "animal": "fantail",
       "type": "sky",
       "image": "/images/piwakawaka.jpg",
-      "personality": "extrovert"
+      "personality": "extravert"
     },
     {
       "id": 5,
@@ -41,21 +41,21 @@
       "animal": "sunfish",
       "type": "sea",
       "image": "/images/sunfish.jpg",
-      "personality": "extrovert"
+      "personality": "extravert"
     },
     {
       "id": 7,
       "animal": "frechiella",
-      "type": "cosmic",
+      "type": "cosmos",
       "image": "/images/frechiella.jpg",
       "personality": "introvert"
     },
   {
     "id": 8,
     "animal": "unicorn",
-    "type": "cosmic",
+    "type": "cosmos",
     "image": "/images/unicorn.jpg",
-    "personality": "extrovert"
+    "personality": "extravert"
   }
   ]
 }
