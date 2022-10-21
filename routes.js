@@ -42,7 +42,7 @@ router.get('/:element', async (req, res) => {
 
 // router should ideally say '/:elements/:name' where name is the name of animal
 
-router.get('/elements/:vibes', async (req, res) => {
+router.get('/:element/:vibes', async (req, res) => {
   const id = JSON.parse(await fs.readFile('data.json')).animals.find(
     (animals) => animals.id === Number(req.params.id)
   )

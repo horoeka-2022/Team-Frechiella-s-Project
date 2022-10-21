@@ -1,4 +1,4 @@
-<h3 class='question'>STEP2: In this dream, you choose to make a friend - make
+{{!-- <h3 class='question'>STEP2: In this dream, you choose to make a friend - make
   your decision</h3>
 <div class='container'>
   {{#each vibes}}
@@ -10,5 +10,22 @@
   </div>
 
   {{/each}}
-</div>
+</div> --}}
 
+<h3 class='question'>STEP2: In this dream, you choose to make a friend - make
+  your decision</h3>
+<div class='container'>
+  {{#each vibes}}
+
+    <div class='element-list'>
+      <p class='text-in-circle'>{{vibe}}</p>
+      {{! maybe need result/:id path }}
+      <a href='/{{element}}/{{vibe}}'><img
+          class='img-circle'
+          src='{{image}}'
+          alt='{{name}}'
+        /></a>
+    </div>
+
+  {{/each}}
+</div>
